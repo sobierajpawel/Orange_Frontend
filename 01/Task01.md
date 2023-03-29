@@ -39,7 +39,13 @@ ng new student-manager-angular
 ```
 Wybierz domyślną wersję routingu oraz CSS jako wybór języka do arkusza styli.
 
-8. Uruchom aplikacje poleceniem 
+8. Zamontuj utworzony folder za pomocą polecenia.
+
+```ps
+cd student-manager-angular
+```
+
+9. Uruchom aplikacje poleceniem 
 
 ```ps
 ng serve --open
