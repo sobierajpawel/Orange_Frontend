@@ -1,4 +1,4 @@
-# Struktura projektu Angular
+# Zmiana struktury projektu oraz dodanie Bootstrap'a
 
 1. Usuń z pliku app.component.html zawartość między komentarzami.
 
