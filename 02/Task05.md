@@ -6,11 +6,11 @@
 ng generate component create-student-form
 ```
 
-2. Zamontuj komponent w głównym widoku w pliku `app.component.html`.
+2. Sprawdź czy router-outlet jest prawidłowo zamontowany w  `app.component.html`.
 
 ```html
 <div class="container-fluid">
-  <app-create-student-form></app-create-student-form>
+    <router-outlet></router-outlet>
 </div>
 ```
 
