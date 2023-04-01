@@ -1,0 +1,24 @@
+<h3>Lista studentów</h3>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Imię i nazwisko studenta</th>
+      <th>Adres email</th>
+      <th>Akcje/Operacje</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let x of students">
+        <td>{{x.id}}</td>
+        <td>{{x.name}}</td>
+        <td><a href="mailto:jankowalski@gmail.com">{{x.email}}</a></td>
+        <td></td>
+    </tr>
+  </tbody>
+</table>
+
+<p *ngFor="let x of students">
+    {{x.name}}
+</p>
