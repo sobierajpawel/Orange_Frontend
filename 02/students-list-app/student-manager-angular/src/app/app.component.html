@@ -7,10 +7,10 @@
           <a class="nav-link active" aria-current="page" href="#">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Dodaj studenta</a>
+          <a class="nav-link" [routerLinkActive]="['is-active']" [routerLink]="['/add-student']">Dodaj studenta</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Przeglądaj studenta</a>
+          <a class="nav-link" [routerLinkActive]="['is-active']" [routerLink]="['/students']">Przeglądaj studentów</a>
         </li>
       </ul>
     </div>
@@ -18,9 +18,7 @@
 </nav>
 
 <div class="container-fluid">
-  <!-- <router-outlet></router-outlet> -->
-  <!-- <app-students-list></app-students-list> -->
-  <app-create-student></app-create-student>
+  <router-outlet></router-outlet>
 </div>
 
 <div class="navbar fixed-bottom">

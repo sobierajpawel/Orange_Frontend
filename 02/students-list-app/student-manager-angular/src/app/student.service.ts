@@ -19,4 +19,9 @@ export class StudentService {
   postStudent(student:Student) :Observable<Student>{
     return this.http.post<Student>(this.studentsUrl,student);
   }
+
+  deleteStudent(student:Student) {
+    const url = `${this.studentsUrl}/${student.id}`;
+    return this.http.delete<Student>(url);
+  }
 }
