@@ -1,0 +1,30 @@
+<h3>Lista studentów</h3>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Imię i nazwisko studenta</th>
+      <th>Adres email</th>
+      <th>Akcje/Operacje</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr [ngClass]="{'table-primary':x.id == 3, 'table-success': x.id > 7}" 
+        *ngFor="let x of students">
+      <td>{{x.id}}</td>
+      <td>{{x.name | uppercase}}</td>
+      <td><a *ngIf="x.id > 5" href="mailto:{{x.email}}">{{x.email | lowercase}}</a></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
+<div *ngFor="let x of students">
+  <p *ngIf="x.id % 2 == 0">
+    {{x.name}}
+  </p>
+  <h4 *ngIf="x.name == 'Clementine Bauch'">
+    {{x.name}}
+  </h4>
+</div>
