@@ -1,0 +1,40 @@
+<h3>Lista studentów</h3>
+
+<div *ngIf="isLoading" class="spinner-border text-success" role="status">
+</div>
+
+<div *ngIf="isStudentDeleted" class="alert alert-danger" role="alert">
+    {{deletedStudentText}}
+</div>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Imię i nazwisko studenta</th>
+      <th>Adres email</th>
+      <th>Akcje/Operacje</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr [ngClass]="{'table-primary':student.id == 3, 'table-success': student.id > 7}" 
+        *ngFor="let student of students">
+      <td>{{student.id}}</td>
+      <td>{{student.name | uppercase}}</td>
+      <td><a *ngIf="student.id > 5" href="mailto:{{student.email}}">{{student.email | lowercase}}</a></td>
+      <td>
+        <button type="button" class="btn btn-warning btn-edit" routerLink="/students/edit/{{student.id}}">Edytuj</button>
+        <button (click)="deleteStudent(student)" class="btn btn-outline-danger btn-font-bold">Usuń</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<div *ngFor="let x of students">
+  <p *ngIf="x.id % 2 == 0">
+    {{x.name}}
+  </p>
+  <h4 *ngIf="x.name == 'Clementine Bauch'">
+    {{x.name}}
+  </h4>
+</div>

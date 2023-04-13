@@ -1,0 +1,27 @@
+<h2>Dodaj nowego studenta</h2>
+
+<div>
+  <div class="mb-3">
+    <label class="form-label form-better-label">Imię i nazwisko</label>
+    <input class="form-control" type="text" #name>
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label" style="font-size:20px">Adres email</label>
+    <input class="form-control" type="email" #email>
+  </div>
+
+  <div *ngIf="isValidationFieldRequired" class="alert alert-danger" role="alert">
+    Jedno z pól - imie i nazwisko lub email studenta nie jest wypełniony!
+  </div>
+
+  <div *ngIf="isValidationEmailIncorrect" class="alert alert-danger" role="alert">
+    Adres email nie zawiera znaku @
+  </div>
+
+  <div *ngIf="isSuccess" class="alert alert-success" role="alert">
+    Wysłanie studenta na serwer zakończone sukcesem (wysłano żądanie POST)!
+  </div>
+
+  <button (click)="addStudent(name.value, email.value)" class="btn btn-outline-success">Zapisz</button>
+</div>
