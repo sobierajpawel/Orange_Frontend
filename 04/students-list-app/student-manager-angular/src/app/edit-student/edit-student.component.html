@@ -1,0 +1,27 @@
+<div *ngIf="student">
+    <!-- {{ }} z TS -> HTML -->
+    <h2>Edytuj {{student.name}}</h2>
+
+    <div>
+        <label class="form-label">Imię i nazwisko</label>
+        <!-- z TS -> HTML -> TS -->
+        <input class="form-control" type="text" [(ngModel)]="student.name" >
+    </div>
+
+    <div>
+        <label class="form-label">Adres e-mail:</label>
+        <input type="email" class="form-control" [(ngModel)]="student.email">
+    </div>
+
+    <div style="margin-top:10px">
+        <button class="btn btn-primary" 
+        (click)="save()"
+        style="margin-right:10px">Zapisz</button>
+        <button class="btn btn-secondary">Anuluj</button>
+    </div>
+</div>
+
+<div *ngIf="isSuccess" class="alert alert-success" role="alert">
+    <h4 class="alert-heading">Zaktualizowano studenta!</h4>
+    <p>Pomyślnie zaktualizowano dane na serwerze, wysłano żądanie PUT!</p>
+</div>

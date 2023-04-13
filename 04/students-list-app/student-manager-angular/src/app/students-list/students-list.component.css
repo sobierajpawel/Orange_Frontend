@@ -1,0 +1,9 @@
+.btn-font-bold{
+    font-weight: bold;
+    border: dotted 2px;
+}
+
+.btn-edit{
+    font-weight: bold;
+    margin-right: 5px;
+}
